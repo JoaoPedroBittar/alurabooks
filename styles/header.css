@@ -31,7 +31,7 @@
     position: absolute;
     top: 100%;
     width: 50vw;
-
+    z-index: 9999; /* garante que fique acima de tudo */
 }
 
 .container__botao:checked~.lista_menu {
