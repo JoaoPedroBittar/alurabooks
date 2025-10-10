@@ -1,67 +1,100 @@
-.cabeçalho_menu_hamburguer {
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/Menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    background-size: contain;
-    margin-left: 1em;
-}
-
-.cabeçalho{
+.cabeçalho {
     background-color: var(--cor_branca);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0.5em 1em;
+    z-index: 1000; /* garante que fique acima de outros elementos */
 }
 
+/* Container interno do cabeçalho */
 .container {
     display: flex;
     align-items: center;
 }
 
+/* Imagens dentro do container */
 .container_imagem {
-    padding: 1em;
+    padding: 0.5em;
 }
 
+/* ====================== Menu Hambúrguer ====================== */
+.cabeçalho_menu_hamburguer {
+    width: 24px; /* largura do ícone */
+    height: 24px; /* altura do ícone */
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+    cursor: pointer;
+}
+
+/* Label que envolve o checkbox do menu */
+label[for="menu"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Checkbox escondido */
+.container__botao {
+    display: none;
+}
+
+/* ====================== Lista do Menu ====================== */
 .lista_menu {
     display: none;
     position: absolute;
     top: 100%;
+    left: 0;
     width: 50vw;
-    z-index: 9999; /* garante que fique acima de tudo */
+    background-color: var(--cor_branca);
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.container__botao:checked~.lista_menu {
+/* Mostra menu quando checkbox estiver marcado */
+.container__botao:checked ~ .lista_menu {
     display: block;
 }
 
+/* ====================== Itens do Menu ====================== */
 .lista_menu_titulo,
 .lista_menu_item {
     padding: 1em;
-    background-color: var(--cor_branca);
-
+    margin: 0;
+    border-bottom: 1px solid var(--azul); /* linha azul uniforme */
 }
 
+/* Último item sem borda */
+.lista_menu_item:last-child {
+    border-bottom: none;
+}
+
+/* Estilo do título do menu */
 .lista_menu_titulo {
     color: var(--laranja);
     font-weight: bold;
 }
 
-.lista_menu_item {
-    color: var(--azul-degrade);
-}
-
+/* Links do menu */
 .lista_menu__link {
-    background: var(--azul-degrade);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    color: var(--azul-degrade);
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 100%;
 }
 
-.container__botao {
-    display: none;
+/* ====================== Extras ====================== */
+/* Faz o menu ficar acima de todos os elementos */
+.lista_menu, .cabeçalho {
+    z-index: 9999;
 }
