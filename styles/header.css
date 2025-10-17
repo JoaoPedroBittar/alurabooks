@@ -1,100 +1,118 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
 .cabeçalho {
-    background-color: var(--cor_branca);
+    background-color: var(--branco);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 0.5em 1em;
-    z-index: 1000; /* garante que fique acima de outros elementos */
 }
 
-/* Container interno do cabeçalho */
 .container {
     display: flex;
     align-items: center;
 }
 
-/* Imagens dentro do container */
-.container_imagem {
-    padding: 0.5em;
+.container__imagem {
+    padding: 1em;
 }
 
-/* ====================== Menu Hambúrguer ====================== */
-.cabeçalho_menu_hamburguer {
-    width: 24px; /* largura do ícone */
-    height: 24px; /* altura do ícone */
-    background-image: url("../img/Menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__botao:checked~.lista-menu {
     display: block;
-    cursor: pointer;
 }
 
-/* Label que envolve o checkbox do menu */
-label[for="menu"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
 }
 
-/* Checkbox escondido */
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
 .container__botao {
     display: none;
 }
 
-/* ====================== Lista do Menu ====================== */
-.lista_menu {
+.container__titulo {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 50vw;
-    background-color: var(--cor_branca);
-    z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
 
-/* Mostra menu quando checkbox estiver marcado */
-.container__botao:checked ~ .lista_menu {
-    display: block;
+.opções {
+    display: none;
 }
 
-/* ====================== Itens do Menu ====================== */
-.lista_menu_titulo,
-.lista_menu_item {
-    padding: 1em;
-    margin: 0;
-    border-bottom: 1px solid var(--azul); /* linha azul uniforme */
-}
 
-/* Último item sem borda */
-.lista_menu_item:last-child {
-    border-bottom: none;
-}
+@media screen and (min-width: 1024px) {
 
-/* Estilo do título do menu */
-.lista_menu_titulo {
-    color: var(--laranja);
-    font-weight: bold;
-}
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
 
-/* Links do menu */
-.lista_menu__link {
-    display: block;
-    text-decoration: none;
-    color: var(--azul-degrade);
-    text-transform: uppercase;
-    font-weight: 500;
-    width: 100%;
-}
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
 
-/* ====================== Extras ====================== */
-/* Faz o menu ficar acima de todos os elementos */
-.lista_menu, .cabeçalho {
-    z-index: 9999;
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opções {
+        display: flex;
+    }
+
+    .opções__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opções__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .cabeçalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opções__botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opções__botão {
+        display: none;
+    }
+
 }
