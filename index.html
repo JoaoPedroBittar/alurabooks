@@ -7,65 +7,67 @@
     <title>AluraBooks</title>
 
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
 </head>
 
 <body>
     <header class="cabeçalho">
-    <!-- Container principal -->
-    <div class="container">
-        <!-- Menu mobile -->
-        <input type="checkbox" id="menu" class="container__botao">
-        <label for="menu">
-            <span class="cabeçalho__menu-hamburguer container__imagem"></span>
-        </label>
+        <!-- Container principal -->
+        <div class="container">
+            <!-- Menu mobile -->
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu">
+                <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+            </label>
 
-        <!-- Lista de categorias mobile -->
-        <ul class="lista-menu">
-            <li class="lista-menu__titulo">Categorias</li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Programação</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Front-end</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infraestrutura</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Design & UX</a></li>
+            <!-- Lista de categorias mobile -->
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Programação</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Front-end</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infraestrutura</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Design & UX</a></li>
+            </ul>
+
+            <!-- Logo e título -->
+            <img src="img/Logo.svg" alt="Logo" class="container__imagem">
+            <h1 class="container__titulo"><b class="container__titulo--negrito">Alura</b>Books</h1>
+        </div>
+
+        <!-- Menu desktop -->
+        <ul class="opções">
+            <input type="checkbox" id="opções-menu" class="opções__botão">
+            <label for="opções-menu">
+                <li class="opções__item">Categorias</li>
+            </label>
+
+            <ul class="lista-menu">
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Programação</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Front-end</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infraestrutura</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Design & UX</a></li>
+            </ul>
+
+            <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
+            <li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
         </ul>
 
-        <!-- Logo e título -->
-        <img src="img/Logo.svg" alt="Logo" class="container__imagem">
-        <h1 class="container__titulo"><b class="container__titulo--negrito">Alura</b>Books</h1>
-    </div>
-
-    <!-- Menu desktop -->
-    <ul class="opções">
-        <input type="checkbox" id="opções-menu" class="opções__botão">
-        <label for="opções-menu">
-            <li class="opções__item">Categorias</li>
-        </label>
-
-        <ul class="lista-menu">
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Programação</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Front-end</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infraestrutura</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__link">Design & UX</a></li>
-        </ul>
-
-        <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
-        <li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
-    </ul>
-
-    <!-- Ícones do usuário -->
-    <div class="container">
-        <a href="#"><img src="img/Favoritos.svg" alt="Meus Favoritos" class="container__imagem container__imagem-transparente"></a>
-        <a href="#"><img src="img/Compras.svg" alt="Carrinho" class="container__imagem"></a>
-        <a href="#"><img src="img/Usuário.svg" alt="Meu Perfil" class="container__imagem"></a>
-    </div>
-</header>
+        <!-- Ícones do usuário -->
+        <div class="container">
+            <a href="#"><img src="img/Favoritos.svg" alt="Meus Favoritos"
+                    class="container__imagem container__imagem-transparente"></a>
+            <a href="#"><img src="img/Compras.svg" alt="Carrinho" class="container__imagem"></a>
+            <a href="#"><img src="img/Usuário.svg" alt="Meu Perfil" class="container__imagem"></a>
+        </div>
+    </header>
 
     <section class="banner">
         <h2 class="banner__titulo">Já sabe por onde começar?</h2>
@@ -88,6 +90,9 @@
                 <div class="swiper-slide"><img src="img/Portugol.svg" alt="Livro sobre Portugol"></div>
                 <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="Livro sobre Acessibilidade"></div>
             </div>
+            <!-- 👇 adiciona estas linhas -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
 
         <!--
@@ -136,6 +141,9 @@
                     <div class="swiper-slide"><img src="img/MetricasAgeis.svg" alt="Livro sobre Portugol"></div>
                     <div class="swiper-slide"><img src="img/Acessibilidade.svg" alt="Livro sobre Acessibilidade"></div>
                 </div>
+                <!-- 👇 adiciona estas linhas -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
 
             <!--
@@ -203,22 +211,31 @@
         </section>
 
         <section class="contato">
-            <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
-            <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+            <div class="contato__descrição">
+                <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+                <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+            </div>
             <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
         </section>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script>
-            const swiper = new Swiper('.swiper', {
-                spaceBetween: 10,
-                slidesPerView: 3,
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
-                    clickable: true,
-                },
+            const swipers = document.querySelectorAll('.swiper');
+
+            swipers.forEach(swiperEl => {
+                new Swiper(swiperEl, {
+                    spaceBetween: 10,
+                    slidesPerView: 3,
+                    pagination: {
+                        el: swiperEl.querySelector('.swiper-pagination'),
+                        type: 'bullets',
+                    },
+                    navigation: {
+                        nextEl: swiperEl.querySelector('.swiper-button-next'),
+                        prevEl: swiperEl.querySelector('.swiper-button-prev'),
+                    },
+                });
             });
         </script>
 </body>

@@ -25,6 +25,8 @@ body {
     width: 100%;
 }
 
+
+
 /* Esconde setas */
 .swiper-button-prev,
 .swiper-button-next,
@@ -42,7 +44,8 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5em;
-    gap: 1em; /* Adiciona espaço entre o texto e a imagem */
+    gap: 1em;
+    /* Adiciona espaço entre o texto e a imagem */
 }
 
 .card__botões {
@@ -80,7 +83,7 @@ body {
 }
 
 .descrição__texto {
-font-size: 14PX;
+    font-size: 14PX;
 }
 
 .botões__ancora {
@@ -89,4 +92,30 @@ font-size: 14PX;
     color: var(--branco);
     font-weight: 700;
     text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .carrosel__titulo {
+        font-size: 26px;
+    }
+
+    .swiper-pagination {
+        margin: 2em 0 3em 0;
+    }
+
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block !important;
+        top: 60%;
+    }
+
+    .card{
+        width: 40%;
+        margin: 2em auto;
+    }
+
 }
