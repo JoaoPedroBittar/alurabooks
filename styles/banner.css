@@ -35,6 +35,16 @@
     padding-left: 1em;
 }
 
+/* quando o input recebe foco (clicado) */
+.banner__pesquisa:focus {
+  background: none; /* remove o ícone */
+}
+
+/* esconde o texto do placeholder quando o input está focado */
+.banner__pesquisa:focus::placeholder {
+  opacity: 0; /* desaparece suavemente */
+}
+
 @media screen and (min-width: 1024px) {
     .banner__titulo{
         font-size: 36px;
