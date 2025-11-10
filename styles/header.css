@@ -1,10 +1,12 @@
 .cabeçalho__menu-hamburguer {
-    width: 24px;
+    width: 30px;
     height: 24px;
     background-image: url("../img/Menu.svg");
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+    margin-left: 1em;
+    margin-right: 0.5em;
 }
 
 .cabeçalho {
@@ -13,14 +15,17 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    height: 70px;
 }
 
 .container {
     display: flex;
     align-items: center;
+    padding: 0;
+    margin-right: 2em;
 }
 
-.container__imagem {
+.container__logo {
     padding: 1em;
 }
 
@@ -66,13 +71,31 @@
     display: none;
 }
 
+.container__texto{
+    display: none;
+}
+
 
 @media screen and (min-width: 1024px) {
+
+
+
+    .container__logo{
+        margin-bottom: 10px;
+    }
+    
+    /* ===== Logo + título ===== */
+    .container_logo_titulo {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem; /* espaço entre logo e título */
+    }
 
     .container__titulo,
     .container__titulo--negrito {
         font-family: var(--fonte-secundario);
         font-size: 30px;
+        margin: 0; /* evita deslocamento vertical */
     }
 
     .container__titulo {
@@ -84,12 +107,24 @@
         font-weight: 700;
     }
 
+    /* ===== Cabeçalho principal ===== */
+    .cabeçalho {
+        background-color: var(--branco);
+        display: flex;
+        justify-content: space-between; /* separa blocos (logo/título, menu, ícones) */
+        align-items: center;
+        padding: 0 3rem; /* espaçamento lateral uniforme */
+        position: relative;
+    }
+
+    /* ===== Menu principal ===== */
     .opções {
         display: flex;
+        align-items: center;
+        gap: 2rem; /* espaço entre os itens do menu */
     }
 
     .opções__item {
-        padding: 0 1em;
         text-transform: uppercase;
     }
 
@@ -98,6 +133,14 @@
         color: var(--preto);
     }
 
+    /* ===== Ícones do usuário ===== */
+    .container:last-child {
+        display: flex;
+        align-items: center;
+        gap: 2rem; /* espaço entre os ícones */
+    }
+
+    /* ===== Elementos escondidos no desktop ===== */
     .container__imagem-transparente {
         display: none;
     }
@@ -115,4 +158,49 @@
         display: none;
     }
 
+}
+
+@media screen and (min-width: 1728px) {
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+        margin-left: 2rem; /* distancia entre cada link */
+    }
+
+    .container {
+        margin-right: 3rem; /* afasta tudo um pouco da borda */
+    }
+
+    .container__imagem {
+    padding: 0; /* remove o padding que estava afastando */
+    
+}
+
+    .cabeçalho{
+        padding: 0 2em;
+    }
+
+    .opções{
+        margin-right: auto;
+    }
+
+    .container_logo_titulo{
+        display: flex;
+        align-items: center;
+    }
+
+    .container__titulo{
+        margin-left: 0.3em;
+    }
+
+    .container__logo{
+        margin-bottom: 10px;
+    }
+
+    .container__texto{
+    display: block;
+}
 }

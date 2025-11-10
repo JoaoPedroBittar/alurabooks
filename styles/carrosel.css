@@ -113,9 +113,45 @@ body {
         top: 60%;
     }
 
-    .card{
+    .card {
         width: 40%;
         margin: 2em auto;
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .carrosel__container {
+        display: flex;
+        margin: 0em 20vw 4em 20vw;
+        align-items: center;
+    }
+
+    /* Pagination em cima do carrossel */
+    .swiper-pagination {
+        position: initial !important;
+        margin: 1em 0;
+    }
+
+    .swiper {
+        width: 50%;
+    }
+
+    .card {
+        width: 60%;
+        margin-left: 3em;
+    }
+
+    .descrição_titulo {
+        font-size: 32px;
+    }
+
+    .descrição{
+        margin-right: 2em;
+    }
+
+    .descrição__texto {
+        font-size: 16px;
     }
 
 }
