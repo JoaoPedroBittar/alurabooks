@@ -5,8 +5,28 @@
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
-    margin-left: 1em;
+    
+}
+
+/* (NOVO BLOCO DE CÓDIGO) */
+.container__rotulo {
+    /* Adiciona o enchimento (padding) que você queria */
+    padding: 2em; 
+    
+    /* Move as margens do ícone para o rótulo */
+    margin-left: 0em;
     margin-right: 0.5em;
+
+    /* Opcional: arredonda as bordas do fundo azul */
+    border-radius: 4px;
+}
+
+.container__botao:checked ~ .container__rotulo > .cabeçalho__menu-hamburguer{
+    background-image: url("../img/menu_black_24dp\ 1.svg");
+}
+
+.container__botao:checked ~ .container__rotulo{
+    background: var(--azul-degrade);
 }
 
 .cabeçalho {
@@ -113,7 +133,7 @@
         display: flex;
         justify-content: space-between; /* separa blocos (logo/título, menu, ícones) */
         align-items: center;
-        padding: 0 3rem; /* espaçamento lateral uniforme */
+        padding: 0 2rem; /* espaçamento lateral uniforme */
         position: relative;
     }
 
@@ -121,7 +141,7 @@
     .opções {
         display: flex;
         align-items: center;
-        gap: 2rem; /* espaço entre os itens do menu */
+        gap: 0rem; /* espaço entre os itens do menu */
     }
 
     .opções__item {
@@ -158,6 +178,23 @@
         display: none;
     }
 
+    .opções__botão:checked~.opções__rotulo>.opções__item {
+                background: var(--azul-degrade);
+                color: var(--branco)
+    }
+
+    .opções__item{
+    padding: 2em 2em;
+    }
+
+    .lista-menu__item:hover{
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover > .lista-menu__link{
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
 }
 
 @media screen and (min-width: 1728px) {

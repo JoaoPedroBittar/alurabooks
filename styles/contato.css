@@ -1,6 +1,10 @@
+/* --- CSS MOBILE (Base) --- */
 .contato {
     background-color: var(--branco);
     padding: 1em;
+    display: flex;
+    flex-direction: column; /* [Descrição] em cima */
+    align-items: center;    /* [Formulário] embaixo, centralizado */
 }
 
 .contato__titulo,
@@ -9,6 +13,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.contato__descrição {
+    /* Opcional: centralizar texto no mobile */
+    text-align: center;
 }
 
 .contato__titulo {
@@ -21,45 +30,97 @@
     margin: 1em 0;
 }
 
+/* O novo wrapper do formulário no mobile */
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* O wrapper todo tem 90% */
+}
+
 .contato__email {
     padding: 1em;
     border: 1px solid var(--azul);
     border-radius: 24px;
-    width: 90%;
+    width: 100%; /* Ocupa 100% do .contato__formulario */
     color: var(--azul);
+    margin-bottom: 1em;
+    
+    /* Box-sizing é bom para o padding não quebrar a largura */
+    box-sizing: border-box; 
 }
 
 .contato__email::placeholder {
     font-family: var(--fonte-principal);
     color: var(--azul);
     background: url("../img/Email.svg") no-repeat;
-    padding-left: 2em;
+    background-position: 0.5em center;
+    padding-left: 2.5em;
 }
 
+.cadastro__botao {
+    background-color: var(--azul);
+    color: #FFFFFF;
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 8px;
+    cursor: pointer;
+    
+    /* Regras do mobile anterior */
+    margin-left: 0;
+    width: 30%; /* 30% do .contato__formulario */
+    min-width: 100px; /* Largura mínima */
+    align-self: center; /* Centraliza o botão */
+}
+
+
+/* --- CSS TABLET (1024px) --- */
 @media screen and (min-width: 1024px) {
     .contato {
-        display: flex;
-        justify-content: center;
+        flex-direction: row; /* Lado a lado */
+        justify-content: center; /* Centraliza [Descrição] [Formulário] */
         align-items: center;
         padding: 2em 0;
+    }
+
+    .contato__descrição {
+        margin-right: 1em;
+        width: 30%;
+        text-align: left; /* Alinha o texto de volta à esquerda */
     }
 
     .contato__titulo {
         font-size: 24px;
     }
 
-    .contato__descrição {
-        margin-right: 4em;
-        width: 30%;
+    .contato__formulario {
+        flex-direction: row; /* [Input] [Botão] lado a lado */
+        width: auto;
     }
 
     .contato__email {
-        width: 30%;
+        width: 300px; /* Largura fixa (ajuste como preferir) */
+        margin-bottom: 0; /* Reseta o mobile */
+    }
+
+    .cadastro__botao {
+        width: auto; /* Largura natural (pelo padding) */
+        align-self: auto; /* Reseta o mobile */
+        margin-left: 1em; /* Espaço entre input e botão */
     }
 }
 
+
+/* --- CSS DESKTOP GRANDE (1728px) --- */
 @media screen and (min-width: 1728px) {
     .contato {
-        padding: 3em 20vw;
+        padding: 3em 12vw;
+    }
+
+    .contato__texto{
+        width: 20vw;
+    }
+
+    .contato__descrição {
+        margin-right: 2em; /* Garante um espaço */
     }
 }
