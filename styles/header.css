@@ -11,12 +11,7 @@
 /* (NOVO BLOCO DE CÓDIGO) */
 .container__rotulo {
     /* Adiciona o enchimento (padding) que você queria */
-    padding: 2em 1em 2em 1.5em;
-    
-    /* Move as margens do ícone para o rótulo */
-    margin-left: 0em;
-    margin-right: 0em;
-
+    padding: 2em 1.2em 2em 1.2em;
     /* Opcional: arredonda as bordas do fundo azul */
     border-radius: 4px;
 }
@@ -46,7 +41,7 @@
 }
 
 .container__logo {
-    padding: 1em;
+    padding: 1em 0em 1em 0.5em;
     margin: 0;
 }
 
@@ -55,6 +50,7 @@
     position: absolute;
     top: 100%;
     width: 60vw;
+    text-decoration: none;
 }
 
 .container__botao:checked~.lista-menu {
