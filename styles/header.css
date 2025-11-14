@@ -43,6 +43,7 @@
 .container__logo {
     padding: 1em 0em 1em 0.5em;
     margin: 0;
+    cursor: pointer;
 }
 
 .lista-menu {
@@ -61,6 +62,10 @@
 .lista-menu__item {
     padding: 1em;
     background-color: var(--branco);
+}
+
+.opções__rotulo {
+    cursor: pointer;
 }
 
 .lista-menu__titulo {
